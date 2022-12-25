@@ -2,8 +2,7 @@ package org.example.Entity;
 
 import lombok.Getter;
 import org.springframework.data.redis.core.RedisHash;
-import org.springframework.web.bind.ServletRequestBindingException;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 import javax.persistence.Id;
 import java.time.LocalDateTime;
