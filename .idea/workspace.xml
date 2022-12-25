@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b9be302-1006-4e0f-85a6-2095b2c97e82" name="변경" comment="&lt;feat&gt;redis 공부자료 메세지 브로커">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -14,6 +13,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -108,7 +108,7 @@
       <workItem from="1671800182754" duration="660000" />
       <workItem from="1671821330324" duration="21000" />
       <workItem from="1671972433537" duration="1564000" />
-      <workItem from="1671995988639" duration="3566000" />
+      <workItem from="1671995988639" duration="4100000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;feat&gt;redis 공부자료 일단 세이프">
       <created>1671793467237</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671999139146</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&lt;feat&gt;redis 공부자료 메세지 브로커">
+      <created>1671999581800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671999581800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
