@@ -2,6 +2,7 @@ package org.example.redisConfig;
 
 import org.example.Entity.ChatMessage;
 import org.example.Redis.CacheKey;
+import org.example.Service.RedisSubService;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
@@ -10,9 +11,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.cache.CacheKeyPrefix;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.listener.ChannelTopic;
+import org.springframework.data.redis.listener.RedisMessageListenerContainer;
+import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
@@ -36,15 +41,35 @@ public class RedisConfig {
     public RedisConnectionFactory redisConnectionFactory() {
         return new LettuceConnectionFactory(redisHost, redisPort);
     }
-
+    /*redisTemplate 설정*/
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
         redisTemplate.setKeySerializer(new StringRedisSerializer());
-//        redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(ChatMessage.class));
+        redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(ChatMessage.class));
         redisTemplate.setValueSerializer(new StringRedisSerializer());
         return redisTemplate;
+    }
+    /*리스너어댑터*/
+    @Bean
+    public MessageListenerAdapter messageListenerAdapter() {
+        return new MessageListenerAdapter(new RedisSubService());
+    }
+    /*컨테이너 설정*/
+    @Bean
+    RedisMessageListenerContainer redisMessageListenerContainer(RedisConnectionFactory connectionFactory,
+                                                                MessageListenerAdapter messageListenerAdapter, ChannelTopic topic) {
+        RedisMessageListenerContainer container = new RedisMessageListenerContainer();
+        container.setConnectionFactory(connectionFactory);
+        container.addMessageListener(messageListenerAdapter, topic);
+        return container;
+
+    }
+    /*pub, sub 토픽 설정*/
+    @Bean
+    ChannelTopic topic() {
+        return new ChannelTopic("topic1");
     }
 
     /*레디스 캐시*/
