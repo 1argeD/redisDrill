@@ -3,6 +3,7 @@ package org.example.Controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.example.Entity.ChatMessage;
+import org.example.Service.RedisPubService;
 import org.example.Service.RedisService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 public class Controller {
     private final RedisService redisService;
+    private final RedisPubService redisPubService;
 
     @PostMapping("api/redisStringTest")
     private String sendString(@RequestBody ChatMessage chatMessage) {
@@ -38,5 +40,11 @@ public class Controller {
     public String getSessionId(HttpSession session) {
         session.setAttribute("name", "treesick");
         return session.getId();
+    }
+
+    @PostMapping("api/chat")
+    public String pubsub(@RequestBody ChatMessage chatMessage) {
+        redisPubService.sendMessage(chatMessage);
+        return "success";
     }
 }
