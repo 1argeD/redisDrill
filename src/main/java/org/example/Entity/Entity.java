@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.springframework.data.redis.core.RedisHash;
 
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @RedisHash(value = "Physiogel", timeToLive = 30)
 public class Entity {
     @Id
+
     private String Id;
     private int ml;
     private String madeIn;

@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b9be302-1006-4e0f-85a6-2095b2c97e82" name="변경" comment="&lt;feat&gt;redis pub sub 자료 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b9be302-1006-4e0f-85a6-2095b2c97e82" name="변경" comment="&lt;feat&gt;redis 레디스와 자바 버전 맞춤">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/redisConfig/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/redisConfig/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RedisRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +111,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -127,7 +131,7 @@
     "spring.configuration.checksum": "e937cf0137bcf70ef0b0f7e044c47f58"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Example">
+  <component name="RunManager" selected="Gradle.RedisRepositoryTest">
     <configuration name="Example" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,6 +178,52 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="RedisRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RedisRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RedisRepositoryTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RedisRepositoryTest.test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="redisDrill [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -195,48 +245,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="redisDrill [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="redisDrill [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="redisDrill.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Main" />
@@ -246,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Example" />
+        <item itemvalue="Gradle.RedisRepositoryTest" />
+        <item itemvalue="Gradle.RedisRepositoryTest.test" />
         <item itemvalue="Gradle.Example.test" />
+        <item itemvalue="Gradle.Example" />
         <item itemvalue="Gradle.redisDrill [build]" />
-        <item itemvalue="Gradle.redisDrill [clean]" />
-        <item itemvalue="Gradle.redisDrill [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +276,8 @@
       <workItem from="1671972433537" duration="1564000" />
       <workItem from="1671995988639" duration="5200000" />
       <workItem from="1672037412743" duration="9124000" />
-      <workItem from="1672128584364" duration="4752000" />
+      <workItem from="1672128584364" duration="6087000" />
+      <workItem from="1672158521767" duration="4084000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;feat&gt;redis 공부자료 일단 세이프">
       <created>1671793467237</created>
@@ -326,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672059849981</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&lt;feat&gt;redis 레디스와 자바 버전 맞춤">
+      <created>1672140480156</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672140480156</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,6 +375,8 @@
     <MESSAGE value="&lt;feat&gt;redis 공부자료 일단 세이프" />
     <MESSAGE value="&lt;feat&gt;redis 공부자료 메세지 브로커" />
     <MESSAGE value="&lt;feat&gt;redis pub sub 자료 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt;redis pub sub 자료 추가" />
+    <MESSAGE value="&lt;feat&gt;redis 레디스와 자바 버전 변경" />
+    <MESSAGE value="&lt;feat&gt;redis 레디스와 자바 버전 맞춤" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt;redis 레디스와 자바 버전 맞춤" />
   </component>
 </project>
