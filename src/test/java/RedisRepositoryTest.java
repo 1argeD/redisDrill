@@ -2,8 +2,10 @@ import org.example.Entity.Entity;
 import org.example.Repository.Repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-public class Example {
+@SpringBootTest
+public class RedisRepositoryTest {
     @Autowired
     private Repository repo;
 
