@@ -40,7 +40,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-
+application.properties/
 application-*.properties/
-application-*.yaml
-application-*.yml
+application-*.yaml/
+application-*.yml/
